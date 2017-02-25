@@ -3,7 +3,7 @@ const mocha = require('gulp-mocha');
 const istanbul = require('gulp-istanbul');
 const util = require('gulp-util');
 
-const sourceFiles = ['**/*.js', '!node_modules/**/*.js', '!**/*.test.js', '!gulpfile.js', '!gulp/**/*.js'];
+const sourceFiles = ['./**/*.js', '!node_modules/**/*.js', '!coverage/**', '!**/*.test.js', '!gulpfile.js', '!gulp/**/*.js'];
 const testFiles = ['**/*.test.js'];
 
 const options = {
@@ -13,7 +13,7 @@ const options = {
 
 gulp.task('pre-test', () => {
   return gulp.src(sourceFiles)
-    .pipe(istanbul())
+    .pipe(istanbul({includeUntested: true}))
     .pipe(istanbul.hookRequire());
 });
 

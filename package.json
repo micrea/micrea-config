@@ -1,18 +1,20 @@
 {
-  "name": "lhq-config",
+  "name": "micrea-starter",
   "version": "0.0.1",
-  "description": "LaughHQ common config library for node applications",
+    "description": "Micrea opinionated starter node application base",
   "main": "index.js",
-  "repository": "https://github.com/LaughHQ/lhq-config",
-  "author": "Matt Calhoun <matt@laughhq.com>",
-  "license": "UNLICENSED",
+  "repository": "https://github.com/micrea/micrea-starter",
+  "author": "Matt Calhoun <matt@mattcalhoun.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
     "test": "gulp test"
   },
   "dependencies": {
     "glob": "^7.1.1",
-    "gulp": "^3.9.1",
-    "nconf": "^0.8.4"
+    "gulp": "^3.9.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",

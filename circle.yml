@@ -1,0 +1,22 @@
+machine:
+  node:
+    version: 6
+  services:
+    - docker
+  environment:
+    SHA: $(echo $CIRCLE_SHA1 | cut -c 1-7)
+    YARN_VERSION: 0.20.0
+    PATH: "${PATH}:${HOME}/.yarn/bin:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+
+dependencies:
+  pre:
+    - sudo add-apt-repository ppa:ecometrica/servers -y
+  override:
+    - yarn install
+  cache_directories:
+    - ~/.yarn
+    - ~/.cache/yarn
+
+test:
+  override:
+    - yarn test
