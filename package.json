@@ -1,9 +1,9 @@
 {
-  "name": "micrea-starter",
+  "name": "micrea-config",
   "version": "0.0.1",
-    "description": "Micrea opinionated starter node application base",
+  "description": "Micrea configuration library working with hierarchical configuration with files and environment variables",
   "main": "index.js",
-  "repository": "https://github.com/micrea/micrea-starter",
+  "repository": "https://github.com/micrea/micrea-config",
   "author": "Matt Calhoun <matt@mattcalhoun.com>",
   "license": "MIT",
   "engines": {
@@ -14,7 +14,9 @@
   },
   "dependencies": {
     "glob": "^7.1.1",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "nconf": "^0.8.4",
+    "string-template": "^1.0.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
